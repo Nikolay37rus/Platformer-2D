@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using Configs;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SpriteAnimatorController: IDisposable
 {
@@ -13,7 +14,8 @@ public class SpriteAnimatorController: IDisposable
         public bool Loop;
         public float Speed = 10;
         public float Counter;
-        public bool Sleep;
+        public bool Sleep;       
+        
 
         public void Update()
         {
@@ -61,7 +63,7 @@ public class SpriteAnimatorController: IDisposable
         {
             animation.Sleep = false;
             animation.Loop = loop;
-            animation.Speed = speed;
+            animation.Speed = speed;         
 
             if (animation.Track != track)
             {
@@ -77,6 +79,7 @@ public class SpriteAnimatorController: IDisposable
             {
                 Loop = loop,
                 Speed = speed,
+
                 Track = track,
                 Sprites = _config.Sequences.Find(match: sequence => sequence.Track == track).Sprites
             }); 

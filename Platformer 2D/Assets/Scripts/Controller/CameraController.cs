@@ -24,6 +24,6 @@ public class CameraController
         y = _playerTransform.position.y;
 
         _cameraTransform.position =
-            Vector3.Lerp(a: _cameraTransform.position, b: new Vector3(x: x + offSetX, y: y + offeSetY, _cameraTransform.position.z), t: Time.deltaTime * _camSpeed);
+            Vector3.Lerp(_cameraTransform.position, new Vector3( x + offSetX,  y + offeSetY, _cameraTransform.position.z),  Time.deltaTime * _camSpeed);
     }
 }

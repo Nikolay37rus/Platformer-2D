@@ -13,10 +13,9 @@ namespace Configs
 
     }
 
-    [CreateAssetMenu(fileName = "SpriteAnimatorConfig", menuName = "Configs/ Animator CFG", order = 0)]
+    [CreateAssetMenu(fileName = "SpriteAnimatorConfig", menuName = "Configs/ Animator CFG", order = 1)]
     public class SpriteAnimatorConfig : ScriptableObject
     {
-        public List<SpriteSequence> Sequences = new List<SpriteSequence>();
 
         [Serializable]
         public sealed class SpriteSequence
@@ -24,5 +23,7 @@ namespace Configs
             public AnimStatePlayer Track;
             public List<Sprite> Sprites = new List<Sprite>();
         }
+
+        public List<SpriteSequence> Sequences = new List<SpriteSequence>();
     }
 }
