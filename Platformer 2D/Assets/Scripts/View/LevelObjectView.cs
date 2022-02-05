@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class LevelObjectView : MonoBehaviour
 {
+
     public Transform _Transform;
     public SpriteRenderer SpriteRenderer;
     public Rigidbody2D _rigidbody2D;
